@@ -27,15 +27,15 @@
         firstDay: 1, // maanantai
         locale: 'fi', // suomenkieliset päivät ja kuukaudet
         headerToolbar: {
-          left: 'prev,next today',
+          left: 'prev,next Tänään',
           center: 'title',
-          right: 'dayGridMonth,timeGridWeek,timeGridDay'
+          right: 'dayGridKuukausi,timeGridViikko,timeGridPäivä'
         },
         allDaySlot: false,
-        slotMinTime: "08:00:00",
-        slotMaxTime: "22:00:00",
+        slotMinTime: "00:00:00",
+        slotMaxTime: "24:00:00",
         events: {
-          url: 'https://calendar.google.com/calendar/ical/https://calendar.google.com/calendar/ical/c_0494e87f049c76912355be5a4ca59962457b3aac0ba7e56ff6e2ceff4cbb3ddf%40group.calendar.google.com/public/basic.ics/public/basic.ics',
+          url: 'https://calendar.google.com/calendar/ical/c_0494e87f049c76912355be5a4ca59962457b3aac0ba7e56ff6e2ceff4cbb3ddf%40group.calendar.google.com/public/basic.ics/public/basic.ics',
           format: 'ics'
         }
       });
