@@ -12,7 +12,7 @@
       font-family: Arial, sans-serif;
     }
     #calendar {
-      max-width: 900px;
+      max-width: 100%;
       margin: 20px auto;
     }
   </style>
@@ -27,9 +27,9 @@
         firstDay: 1, // maanantai
         locale: 'fi', // suomenkieliset päivät ja kuukaudet
         headerToolbar: {
-          left: 'prev,next Tänään',
+          left: 'prev,next Today',
           center: 'title',
-          right: 'dayGridKuukausi,timeGridViikko,timeGridPäivä'
+          right: 'dayGridMonth,timeGridWeek,timeGridDay'
         },
         allDaySlot: false,
         slotMinTime: "00:00:00",
