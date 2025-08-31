@@ -1,1 +1,46 @@
-
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <title>Kaukalo</title>
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    #calendar {
+      max-width: 900px;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="calendar"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'timeGridWeek',
+        firstDay: 1, // maanantai
+        locale: 'fi', // suomenkieliset päivät ja kuukaudet
+        headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        allDaySlot: false,
+        slotMinTime: "08:00:00",
+        slotMaxTime: "22:00:00",
+        events: {
+          url: 'https://calendar.google.com/calendar/ical/https://calendar.google.com/calendar/ical/c_0494e87f049c76912355be5a4ca59962457b3aac0ba7e56ff6e2ceff4cbb3ddf%40group.calendar.google.com/public/basic.ics/public/basic.ics',
+          format: 'ics'
+        }
+      });
+      calendar.render();
+    });
+  </script>
+</body>
+</html>
